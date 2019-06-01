@@ -1,0 +1,257 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--style='height: 100%; width: 100%; object-fit: contain'-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+.containerxx {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.containerxx:hover .image {
+  opacity: 0.3;
+}
+
+.containerxx:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: gray;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+</style>
+
+    <link rel="shortcut icon" type="image/png" href="http://ffutcheo.wwwss47.a2hosted.com/ffutche_foundation/homepage/static/favicon.ico"/>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" type="text/css" href="https://drive.google.com/uc?export=view&id=1lVulQD2kliXjk6-IW9nTFYim4LdVK_tR" />
+
+    <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-102138286-1', 'auto');
+         ga('send', 'pageview');
+    </script>
+
+    <title>
+
+    Ffutche Foundation
+
+    </title>
+</head>
+<body>
+{% url 'donate' as donate %}
+{% url 'home' as home %}
+{% url 'about' as about %}
+{% url 'gallery' as gallery %}
+
+    <div class="container" style="width: 99%; position:relative">
+
+        <!-- NAVBAR START  background: linear-gradient(lightyellow, lightblue); -->
+        <div class="row" style="background-color: white">
+            <!-- LOGO -->
+            <div class="col-md-4 thumbnail" id="logo-frame" style="background-color: white;position: relative; border: none !important;">
+                <a href={{ about }} class="navbar-left"><img id="logo" src="http://gdurl.com/5w_z"
+                style="height:120px; width:275px ;" ></a>
+            </div>
+
+            <div class="col-md-8">
+
+                <div class="row" style="padding-top: 5px;">
+
+                    <ul class="navbar-right list-inline" id="top-link-bar">
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-cubes"></span>&nbsp;Our Work <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left">
+                                <li><a href={{ about }}>Healthcare</a></li>
+                                <li><a href={{ about }}>Education</a></li>
+                                <li><a href={{ about }}>Development</a></li>
+                            </ul>
+                        </li>
+                        <li role="presentation"><a href={{ gallery }}><span class="fa fa-picture-o"></span>&nbsp;Galleries</a></li>
+                        <li role="presentation"><a href={{ about }}><span class="fa fa-university"></span>&nbsp;About Us</a></li>
+                        <li role="presentation"><a href={{ about }}><span class="fa fa-phone-square"></span>&nbsp;Contact Us</a></li>
+                        <li role="presentation"><a href={{ about }}><span class="fa fa-sign-in"></span>&nbsp;Sign In</a></li>
+{#                         <a class="btn btn-primary" href="donate" role="button">&nbsp; Sign In</a>#}
+                        <!-- <li></li> -->
+
+                        <li>
+                            <div role="group" aria-label="...">
+                                <form action="/i18n/setlang/" method="post"><input type='hidden' name='csrfmiddlewaretoken' value='9WDHydmwP84UwU1qjphCqZE5dUnRHRdo' />
+                                    <input name="next" type="hidden" value="" />
+                                    <select name="language">
+
+
+
+
+                                            <option value="en" selected>
+                                                English (en)
+                                            </option>
+
+                                            <option value="fr">
+                                                Français (fr)
+                                            </option>
+
+                                    </select>
+                                    <input type="submit" value="Go" />
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Middle 2 Items -->
+                <div class="row">
+                    <div class="col-md-9 text-center">
+
+                        <h4 id="slogan-header" style="display: inline;color: black">Don't just act... Impact!     </h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a class="btn btn-primary" href={{ donate }} role="button"><span class="fa fa-leaf"></span>&nbsp; Donate</a>
+
+
+                </div>
+                    </div>
+
+
+                <br>
+
+
+            </div>
+        </div>
+
+        <!-- NAVBAR START -->
+
+
+        <!-- Secondary main menu -->
+        <div class="row">
+            <!-- Static navbar -->
+            <nav class="navbar navbar-inverse" id="second-navbar">
+                <div id="navbar" class="navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        {% url 'home' as home %}
+                        <li><a href={{ home }}><span class="fa fa-home"></span>&nbsp; Home</a></li>
+                        <li><a href={{ donate }}><span class="fa fa-leaf"></span>&nbsp; Donate</a></li>
+
+                        <li><a href={{ about }}><span class="fa fa-graduation-cap"></span>&nbsp; Education and Training</a></li>
+                        <li><a href={{ about }}><span class="fa fa-ambulance"></span>&nbsp; Health Care</a></li>
+                        <li><a href={{ about }}><span class="fa fa-wrench"></span>&nbsp; Food and Energy</a></li>
+                    </ul>
+                </div>
+
+                <!--/.nav-collapse -->
+{#                <div>#}
+{##}
+{#                    <img src="http://gdurl.com/Vz7f" style="height: 100%; width: 100%">#}
+{#                </div>#}
+                </nav>
+
+                <!--carousel div-->
+            <div>
+                   <br/>
+                   <br/>
+                   <p>
+                       What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                       What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                       What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                       What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                       What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                       What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+
+                   </p>
+               </div>
+
+
+
+
+
+<hr/>
+
+
+
+
+   <div class="row" style="background-color: white; position: relative">
+
+    <div class="row">
+        <div class="col-md-4">
+            <p><strong>Ffutche Foundation</strong></p>
+            <p>Address: 4246 E Cotton Ct, Gilbert, AZ 85234</p>
+            <p>Phone:</p>
+            <p>Email: founta@hotmail.com</p>
+            <p>Website: www.ffutche.org</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <br>
+            <p><a href="/homepage/get_involved">Get Involved</a></p>
+            <p><a href="/blog/blog_list">Blog</a></p>
+            <p><a href="/homepage/ways_to_give">Ways to Give</a></p>
+        </div>
+        <div class="col-md-4 text-center">
+            <br>
+            <p><a href="/homepage/revenues">Revenues</a> <small>(Coming Soon)</small></p>
+            <p><a href="/homepage/expenditures">Expenditures</a> <small>(Coming Soon)</small></p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+       <footer style="align-content: center; padding: 10px; background-color: lightblue;">
+            <p style="text-align: center"><a href="/homepage/site_map"> Site Map</a> &#124; <a href="/homepage/terms_conditions">Terms &amp; Conditions</a> &#124; <a href="/homepage/privacy">Privacy Policy</a> &#124; Copyright &copy; 2017</p>
+        </footer>
+
+   </div>
+
+
+    </div>
+
+
+</body>
+</html>
